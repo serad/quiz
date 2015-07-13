@@ -6,7 +6,7 @@ exports.question = function(req,res) {
 
 
 exports.answer = function(req,res) {
-	console.log(req)
+
  if(req.query.respuesta === 'Roma') {
 
  	res.render('quizes/answer' , {respuesta: 'Correcto'})
@@ -19,3 +19,9 @@ exports.answer = function(req,res) {
 	
 
 };
+
+// GET /qauthor
+exports.author = function(req,res) {
+	res.render('./author' , {autor: 'Sergio Aguado Diaz'})
+};
+
